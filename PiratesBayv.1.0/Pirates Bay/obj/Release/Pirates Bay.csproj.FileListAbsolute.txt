@@ -1,0 +1,70 @@
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\bin\Release\Pirates Bay.exe.config
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\bin\Release\Pirates Bay.exe
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\bin\Release\Pirates Bay.pdb
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay.csprojResolveAssemblyReference.cache
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\EndGameWindow.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\LoadGameMenu.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\OptionsMenu.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\PlayerDescriptionUserControl.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\PlayersInfo.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\SaveGameDialodWindow.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\ShipYardWindow.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\StartMenu.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\StatisticsWindow.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\App.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\EndGameWindow.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\LoadGameMenu.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\MainWindow.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\OptionsMenu.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\PlayerDescriptionUserControl.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\PlayersInfo.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\SaveGameDialodWindow.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\ShipYardWindow.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\StartMenu.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\StatisticsWindow.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\App.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay_Content.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay_MarkupCompile.cache
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay_MarkupCompile.lref
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Views\MainWindow.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay.g.resources
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Pirates_Bay.Properties.Resources.resources
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay.csproj.GenerateResource.Cache
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay.exe
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay.pdb
+D:\pirate\Pirates Bay\Pirates Bay\bin\Release\Pirates Bay.exe.config
+D:\pirate\Pirates Bay\Pirates Bay\bin\Release\Pirates Bay.exe
+D:\pirate\Pirates Bay\Pirates Bay\bin\Release\Pirates Bay.pdb
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay.csprojResolveAssemblyReference.cache
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\EndGameWindow.baml
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\LoadGameMenu.baml
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\OptionsMenu.baml
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\PlayerDescriptionUserControl.baml
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\PlayersInfo.baml
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\SaveGameDialodWindow.baml
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\ShipYardWindow.baml
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\StartMenu.baml
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\StatisticsWindow.baml
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\App.baml
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\EndGameWindow.g.cs
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\LoadGameMenu.g.cs
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\MainWindow.g.cs
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\OptionsMenu.g.cs
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\PlayerDescriptionUserControl.g.cs
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\PlayersInfo.g.cs
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\SaveGameDialodWindow.g.cs
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\ShipYardWindow.g.cs
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\StartMenu.g.cs
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\StatisticsWindow.g.cs
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\App.g.cs
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay_Content.g.cs
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay_MarkupCompile.cache
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay_MarkupCompile.lref
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Views\MainWindow.baml
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay.g.resources
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Pirates_Bay.Properties.Resources.resources
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay.csproj.GenerateResource.Cache
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay.exe
+D:\pirate\Pirates Bay\Pirates Bay\obj\Release\Pirates Bay.pdb

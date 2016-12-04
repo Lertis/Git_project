@@ -1,0 +1,92 @@
+﻿<Window x:Class="Pirates_Bay.Views.OptionsMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         Title="StartMenu" Height="170" Width="370" Icon="../Resources/Icons/Pirate.ico" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" FontFamily="Bookman Old Style" >
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Cursor" Value="Hand"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Name="TitleBar" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="28"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="28"></ColumnDefinition>
+                <ColumnDefinition Width="28"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.7,1" StartPoint="0.7,0">
+
+                    <GradientStop Color="DimGray" Offset="0"/>
+
+                    <GradientStop Color="Silver" Offset="1"/>
+
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Image Source="../Resources/Icons/Pirate.ico" Grid.Column="0" Margin="2" PreviewMouseLeftButtonDown="TitleBar_PreviewMouseLeftButtonDown"></Image>
+            <TextBlock Grid.Column="1" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Bell MT" FontSize="15" PreviewMouseLeftButtonDown="TitleBar_PreviewMouseLeftButtonDown">Pirates Bay</TextBlock>
+            <Button Name="MinimizeButton" Grid.Column="2" Style="{StaticResource TitleBarButton}" Command="{Binding MinimizeCommand}">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Image Name="MinimizeImage" Source="../Resources/Icons/MinimizeIcon.png" Stretch="UniformToFill" Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand">
+                        </Image>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="MinimizeImage" Property="Width" Value="24"></Setter>
+                                <Setter TargetName="MinimizeImage" Property="Height" Value="24"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+            <Button Name="CloseButton" Grid.Column="3" Style="{StaticResource TitleBarButton}" Command="{Binding CloseCommand}">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Image Name="CloseImage" Source="../Resources/Icons/CloseIcon.png" Stretch="UniformToFill" Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand">
+                        </Image>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="CloseImage" Property="Width" Value="24"></Setter>
+                                <Setter TargetName="CloseImage" Property="Height" Value="24"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1" Name="GridContainer">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="6*"></ColumnDefinition>
+                <ColumnDefinition Width ="*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width ="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>   
+            </Grid.RowDefinitions>
+            <TextBlock Name="TextBlockInterfaceStyle" Grid.Row="1" Grid.Column="1" Text="Interface style" FontSize="20" Foreground="Silver"  FontWeight="DemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Name="TextBlockVolume" Grid.Row="3" Grid.Column="1" Text="Volume" FontSize="20" Foreground="Silver"  FontWeight="DemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+            <ListBox Name="ListBoxStyles" Grid.Row="1" Grid.Column="3" Background="Transparent" SelectionChanged="ListBoxStyles_OnSelectionChanged">
+                <ListBoxItem Name="BlueStyle" Background="SteelBlue" Foreground="WhiteSmoke" Content="Blue" VerticalAlignment="Center" HorizontalAlignment="Stretch"></ListBoxItem>
+                <ListBoxItem Name="DarkStyle" Background="#585252" Foreground="WhiteSmoke" Content="Dark" VerticalAlignment="Center" HorizontalAlignment="Stretch"></ListBoxItem>
+                <ListBoxItem Name="LightStyle" Background="WhiteSmoke" Foreground="#585252" Content="Light" VerticalAlignment="Center" HorizontalAlignment="Stretch"></ListBoxItem>
+            </ListBox>
+            <Slider Name="SliderVolume" Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" Minimum="0" Maximum="100" Value="50" Interval="1"  ValueChanged="SliderVolume_OnValueChanged"></Slider>
+        </Grid>
+    </Grid>
+    <Window.Background>
+        <SolidColorBrush Color="SlateGray"></SolidColorBrush>
+    </Window.Background>
+</Window>

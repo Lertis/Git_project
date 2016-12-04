@@ -1,0 +1,158 @@
+﻿<Window x:Class="Pirates_Bay.Views.PlayersInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PlayersInfo" Height="440" Width="450" Icon="../Resources/Icons/Pirate.ico" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" FontFamily="Bookman Old Style">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Name="TitleBar" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="28"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="28"></ColumnDefinition>
+                <ColumnDefinition Width="28"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.4,1" StartPoint="0.4,0">
+
+                    <GradientStop Color="DimGray" Offset="0"/>
+
+                    <GradientStop Color="Silver" Offset="1"/>
+
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Image Source="../Resources/Icons/Pirate.ico" Grid.Column="0" Margin="2" PreviewMouseLeftButtonDown="TitleBar_PreviewMouseLeftButtonDown"></Image>
+            <TextBlock Grid.Column="1" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Bell MT" FontSize="15" PreviewMouseLeftButtonDown="TitleBar_PreviewMouseLeftButtonDown">Players</TextBlock>
+            <Button Name="MinimizeButton" Grid.Column="2" Style="{StaticResource TitleBarButton}" Command="{Binding MinimizeCommand}">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Image Name="MinimizeImage" Source="../Resources/Icons/MinimizeIcon.png" Stretch="UniformToFill" Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand">
+                        </Image>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="MinimizeImage" Property="Width" Value="24"></Setter>
+                                <Setter TargetName="MinimizeImage" Property="Height" Value="24"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+            <Button Name="CloseButton" Grid.Column="3" Style="{StaticResource TitleBarButton}" Command="{Binding CloseCommand}">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Image Name="CloseImage" Source="../Resources/Icons/CloseIcon.png" Stretch="UniformToFill" Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand">
+                        </Image>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="CloseImage" Property="Width" Value="24"></Setter>
+                                <Setter TargetName="CloseImage" Property="Height" Value="24"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1" Name="GridMainConteiner">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="25*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1" Name="GridDataContainer">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="11*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Name="TextBlockFirstPlayerCaption" Text="First player" Grid.Row="0" Grid.Column="0" Foreground="Silver" FontSize="20" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Name="TextBlockSecondPlayerCaption" Text="Second player" Grid.Row="0" Grid.Column="1" Foreground="Silver" FontSize="20" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                <TextBox  Name="TextBoxFirstUserName" Grid.Row="1" Grid.Column="0" Margin="30,0" BorderBrush="#585252" FontSize="15" Foreground="#585252" TextAlignment="Center" Text="{Binding Path=FirstPlayerName, Mode=TwoWay}"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="1" Margin="30,0" Name="TextBoxSecondtUserName" BorderBrush="#585252" FontSize="15" Foreground="#585252" TextAlignment="Center" Text="{Binding Path=SecondPlayerName, Mode=TwoWay}"></TextBox>
+                <TextBlock Name="TextBlockFirstPlayerShipName" Grid.Row="2" Grid.Column="0" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="{Binding Path=FirstPlayerShipName, Mode=TwoWay}" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Name="TextBlockSecondPlayerShipName" Grid.Row="2" Grid.Column="1" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="{Binding Path=SecondPlayerShipName, Mode=TwoWay}"  Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                <ScrollViewer Grid.Row="3" Margin="15,10" Grid.Column="0" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Visible">
+                    <Grid Width="500" Name="GridFirstPlayerShipsContainer">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="6*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.Background>
+                            <SolidColorBrush Color="SlateGray"></SolidColorBrush>
+                        </Grid.Background>
+                        <Image Name="ImageFirstUserFirstShip" Margin="2" Grid.Column="0" Grid.Row="0" Source="../Resources/Ships/Presentations/Queen Anne's Revenge.jpg" MouseLeftButtonUp="ImageFirstUserFirstShip_OnMouseLeftButtonUp" Cursor="Hand"></Image>
+                        <Image Name="ImageFirstUserSecondShip" Margin="7" Grid.Column="1" Grid.Row="0" Source="../Resources/Ships/Presentations/Old Pearl.jpg" MouseLeftButtonUp="ImageFirstUserSecondShip_OnMouseLeftButtonUp" Cursor="Hand"></Image>
+                        <Image Name="ImageFirstUserThirdShip" Margin="7" Grid.Column="2" Grid.Row="0" Source="../Resources/Ships/Presentations/Pirate Brig.jpg" MouseLeftButtonUp="ImageFirstUserThirdShip_OnMouseLeftButtonUp" Cursor="Hand"></Image>
+                        <TextBlock Name="FirstPlayerFirstShipHealth" Grid.Column="0" Grid.Row="1" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Health: 2400" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="FirstPlayerFirstShipSpeed" Grid.Column="0" Grid.Row="2" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Speed: 60" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="FirstPlayerFirstShipDamage" Grid.Column="0" Grid.Row="3" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Damage: 250" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="FirstPlayerSecondShipHealth" Grid.Column="1" Grid.Row="1" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Health: 2000" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="FirstPlayerSecondShipSpeed" Grid.Column="1" Grid.Row="2" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Speed: 60" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="FirstPlayerSecondShipDamage" Grid.Column="1" Grid.Row="3" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Damage: 300" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="FirstPlayerThirdShipHealth" Grid.Column="2" Grid.Row="1" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Health: 1900" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="FirstPlayerThirdShipSpeed" Grid.Column="2" Grid.Row="2" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Speed: 90" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="FirstPlayerThirdShipDamage" Grid.Column="2" Grid.Row="3" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Damage: 270" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                    </Grid>
+                </ScrollViewer>
+                <ScrollViewer Grid.Row="3" Margin="15,10" Grid.Column="1" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Visible">
+                    <Grid Width="500" Name="GridSecondPlayerShipsContainer">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="6*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.Background>
+                            <SolidColorBrush Color="SlateGray"></SolidColorBrush>
+                        </Grid.Background>
+                        <Image Name="ImageSecondUserFirstShip" Margin="2" Grid.Column="0" Grid.Row="0" Source="../Resources/Ships/Presentations/Queen Anne's Revenge.jpg" MouseLeftButtonUp="ImageSecondUserFirstShip_OnMouseLeftButtonUp" Cursor="Hand"></Image>
+                        <Image Name="ImageSecondUserSecondShip" Margin="7" Grid.Column="1" Grid.Row="0" Source="../Resources/Ships/Presentations/Old Pearl.jpg" MouseLeftButtonUp="ImageSecondUserSecondShip_OnMouseLeftButtonUp" Cursor="Hand"></Image>
+                        <Image Name="ImageSecondUserThirdShip" Margin="7" Grid.Column="2" Grid.Row="0" Source="../Resources/Ships/Presentations/Pirate Brig.jpg" MouseLeftButtonUp="ImageSecondUserThirdShip_OnMouseLeftButtonUp" Cursor="Hand"></Image>
+                        <TextBlock Name="SecondPlayerFirstShipHealth" Grid.Column="0" Grid.Row="1" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Health: 2400" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="SecondPlayerFirstShipSpeed" Grid.Column="0" Grid.Row="2" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Speed: 60" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="SecondPlayerFirstShipDamage" Grid.Column="0" Grid.Row="3" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Damage: 250" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="SecondPlayerSecondShipHealth" Grid.Column="1" Grid.Row="1" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Health: 2000" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="SecondPlayerSecondShipSpeed" Grid.Column="1" Grid.Row="2" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Speed: 60" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="SecondPlayerSecondShipDamage" Grid.Column="1" Grid.Row="3" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Damage: 300" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="SecondPlayerThirdShipHealth" Grid.Column="2" Grid.Row="1" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Health: 1900" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="SecondPlayerThirdShipSpeed" Grid.Column="2" Grid.Row="2" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Speed: 90" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Name="SecondPlayerThirdShipDamage" Grid.Column="2" Grid.Row="3" Background="SlateGray" Margin="20,7,20,0" Foreground="Silver" Text="Damage: 270" Padding="0" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
+            <Grid Grid.Row="3" Name="GridButtonContainer">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Name="ButtonPlay" Content="Play" Grid.Column="1" Style="{StaticResource MenuButtonDarkStyle}" Command="{Binding StartPlayCommand}"></Button>
+            </Grid>
+        </Grid>
+    </Grid>
+    <Window.Background>
+        <ImageBrush ImageSource="../Resources/Background images/DarkStyle/PlayersInfoDark.jpg"></ImageBrush>
+    </Window.Background>
+</Window>

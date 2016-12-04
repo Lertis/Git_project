@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58FF9EA8-6F11-43D1-93E7-0138D59FA73D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pirates_Bay</RootNamespace>
+    <AssemblyName>Pirates Bay</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Icons\Pirate.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BehavioralPatterns\Mediator.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="CreationalPatterns\BlueStyleFactory.cs" />
+    <Compile Include="CreationalPatterns\DarkStyleFactory.cs" />
+    <Compile Include="CreationalPatterns\IGUIComponentsFactory.cs" />
+    <Compile Include="CreationalPatterns\LightStyleFactory.cs" />
+    <Compile Include="CreationalPatterns\SoundsGenerator.cs" />
+    <Compile Include="GameLogic\GameCaretaker.cs" />
+    <Compile Include="GameLogic\GameLogic.cs" />
+    <Compile Include="GameLogic\GameMemento.cs" />
+    <Compile Include="GameLogic\Map.cs" />
+    <Compile Include="GameLogic\MapSquare.cs" />
+    <Compile Include="GameLogic\MapSquareType.cs" />
+    <Compile Include="GameLogic\Player.cs" />
+    <Compile Include="GameLogic\SaveDescription.cs" />
+    <Compile Include="GameLogic\Ship.cs" />
+    <Compile Include="GameLogic\ShipYard.cs" />
+    <Compile Include="StructuralPatterns\AssaultShip.cs" />
+    <Compile Include="StructuralPatterns\PirateShip.cs" />
+    <Compile Include="StructuralPatterns\Ship.cs" />
+    <Compile Include="StructuralPatterns\CargoShip.cs" />
+    <Compile Include="ViewModels\SaveGameDialogWindowViewModel.cs" />
+    <Compile Include="ViewModels\ShipyardWindowViewModel.cs" />
+    <Compile Include="ViewModels\VictoryViewModel.cs" />
+    <Compile Include="Views\EndGameWindow.xaml.cs">
+      <DependentUpon>EndGameWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoadGameMenu.xaml.cs">
+      <DependentUpon>LoadGameMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OptionsMenu.xaml.cs">
+      <DependentUpon>OptionsMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlayerDescriptionUserControl.xaml.cs">
+      <DependentUpon>PlayerDescriptionUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlayersInfo.xaml.cs">
+      <DependentUpon>PlayersInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SaveGameDialodWindow.xaml.cs">
+      <DependentUpon>SaveGameDialodWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShipYardWindow.xaml.cs">
+      <DependentUpon>ShipYardWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StatisticsWindow.xaml.cs">
+      <DependentUpon>StatisticsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\LoadGameMenuViewModel.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\OptionsMenuViewModel.cs" />
+    <Compile Include="ViewModels\PlatersInfoViewModel.cs" />
+    <Compile Include="ViewModels\PlayerViewModel.cs" />
+    <Compile Include="ViewModels\ShipViewModel.cs" />
+    <Compile Include="ViewModels\StartMenuViewModel.cs" />
+    <Compile Include="Views\StartMenu.xaml.cs">
+      <DependentUpon>StartMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\StatisticsWindowViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Page Include="Views\EndGameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoadGameMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\OptionsMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PlayerDescriptionUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PlayersInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SaveGameDialodWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShipYardWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StartMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StatisticsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Cursors\AnimatedGrinArrow.ani" />
+    <None Include="Cursors\CrossedGrinArrow.ani" />
+    <None Include="Cursors\GreenCross.ani" />
+    <None Include="Cursors\Knife.ani" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Background images\SeaBackground.jpg" />
+    <Resource Include="Resources\Icons\Pirate.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ship2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ship3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Upgrades images\Armored board.jpg" />
+    <Resource Include="Resources\Upgrades images\Improved cannons.jpg" />
+    <Resource Include="Resources\Upgrades images\Improved sails.jpg" />
+    <Resource Include="Resources\Background images\ShipYard.png" />
+    <Resource Include="Resources\Background images\PirateArrowLeft.png" />
+    <Resource Include="Resources\Background images\PirateArrowRight.png" />
+    <Resource Include="Resources\Background images\DarkSmoke.png" />
+    <Resource Include="Resources\Background images\Smoke.png" />
+    <Resource Include="Resources\Background images\PirateGold.png" />
+    <Resource Include="Resources\Background images\SkullCoins.png" />
+    <Resource Include="Resources\Background images\SilverCoint.png" />
+    <Resource Include="Resources\Background images\GoldenShipCoint.png" />
+    <Resource Include="Resources\Background images\DarkStyle\LoadGameMenuDark.jpg" />
+    <Resource Include="Resources\Background images\LightStyle\LoadGameMenuLight.jpg" />
+    <Resource Include="Resources\Background images\BlueStyle\LoadGameMenuBlue.jpg" />
+    <Resource Include="Resources\Background images\ShipyardBackground.jpg" />
+    <Resource Include="Resources\Ships\Presentations\Black Pearl.jpg" />
+    <Resource Include="Resources\Ships\Presentations\The Benjamin.jpg" />
+    <Resource Include="Resources\Ships\Presentations\The Ranger.jpg" />
+    <Resource Include="Resources\Ships\Presentations\The Royal Fortune.jpg" />
+    <Resource Include="Resources\Ships\Models\Black Pearl.png" />
+    <Resource Include="Resources\Ships\Models\Pirate Brig.png" />
+    <Resource Include="Resources\Ships\Models\Queen Anne%27s Revenge.png" />
+    <Resource Include="Resources\Ships\Models\The Benjamin.png" />
+    <Resource Include="Resources\Ships\Models\The Ranger.png" />
+    <Resource Include="Resources\Ships\Models\The Royal Fortune.png" />
+    <Content Include="Resources\Sounds\CoinsDrop.mp3" />
+    <Content Include="Resources\Sounds\DepthCharge.mp3" />
+    <Content Include="Resources\Sounds\MOBY - Lift Me Up.mp3" />
+    <Content Include="Resources\Sounds\Wave.mp3" />
+    <Resource Include="Resources\Ships\Models\Old Pearl.png" />
+    <Resource Include="Resources\Ships\Presentations\Pirate Brig.jpg" />
+    <Resource Include="Resources\Ships\Presentations\Old Pearl.jpg" />
+    <Resource Include="Resources\Ships\Presentations\Queen Anne%27s Revenge.jpg" />
+    <Resource Include="Resources\Icons\CloseIcon.png" />
+    <Resource Include="Resources\Icons\MinimizeIcon.png" />
+    <Resource Include="Resources\Background images\Victory.jpg" />
+    <Resource Include="Resources\Background images\BlueStyle\PlayersInfoSteelBlue.jpg" />
+    <Resource Include="Resources\Background images\BlueStyle\StartMenuSteelBlue.jpg" />
+    <Resource Include="Resources\Background images\DarkStyle\PlayersInfoDark.jpg" />
+    <Resource Include="Resources\Background images\DarkStyle\StartMenuDark.jpg" />
+    <Resource Include="Resources\Background images\LightStyle\PlayersInfoLight.jpg" />
+    <Resource Include="Resources\Background images\LightStyle\StartMenuLight.jpg" />
+    <Resource Include="Resources\Background images\JollyRoger.jpg" />
+    <Resource Include="Resources\Background images\PirateFlag.png" />
+    <Resource Include="Resources\Background images\PirateSymbol.png" />
+    <Resource Include="Resources\Background images\ThePirateBayLogo.png" />
+    <Resource Include="Cursors\PiratesKnife.cur" />
+    <Resource Include="Resources\Background images\PirateTreasure.gif" />
+    <Resource Include="Resources\Background images\Skarb.png" />
+    <Content Include="Resources\PirateHeaveHo.wav" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

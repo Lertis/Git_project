@@ -1,0 +1,38 @@
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\bin\Debug\Pirates Bay.exe.config
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\bin\Debug\Pirates Bay.exe
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\bin\Debug\Pirates Bay.pdb
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Pirates Bay.csprojResolveAssemblyReference.cache
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\App.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Pirates Bay_MarkupCompile.cache
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Pirates Bay.g.resources
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Pirates_Bay.Properties.Resources.resources
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Pirates Bay.csproj.GenerateResource.Cache
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Pirates Bay.exe
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Pirates Bay.pdb
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Pirates Bay_Content.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\App.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\LoadGameMenu.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\MainWindow.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\OptionsMenu.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\PlayersInfo.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\StartMenu.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\StatisticsWindow.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\LoadGameMenu.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\MainWindow.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\OptionsMenu.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\PlayersInfo.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\StartMenu.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\StatisticsWindow.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\PlayerDescriptionUserControl.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\PlayerDescriptionUserControl.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Pirates Bay_MarkupCompile.lref
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\SaveGameDialodWindow.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\SaveGameDialodWindow.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\EndGameWindow.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\EndGameWindow.g.cs
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\ShipYardWindow.baml
+C:\Mine\Work\КПЗ\Pirates Bay\Pirates Bay\obj\Debug\Views\ShipYardWindow.g.cs
+D:\pirate\Pirates Bay v.1.5\Pirates Bay\bin\Debug\Pirates Bay.exe.config
+D:\pirate\Pirates Bay v.1.5\Pirates Bay\obj\Debug\Pirates Bay.exe
+D:\pirate\Pirates Bay v.1.5\Pirates Bay\obj\Debug\Pirates Bay.pdb

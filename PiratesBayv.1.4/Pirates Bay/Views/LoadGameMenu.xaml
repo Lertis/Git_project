@@ -1,0 +1,91 @@
+﻿<Window x:Class="Pirates_Bay.Views.LoadGameMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LoadGameMenu" Height="350" Width="450" Icon="../Resources/Icons/Pirate.ico" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" FontFamily="Bookman Old Style" IsVisibleChanged="LoadGameMenu_OnIsVisibleChanged">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Cursor" Value="Hand"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Name="TitleBar" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="28"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="28"></ColumnDefinition>
+                <ColumnDefinition Width="28"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.4,1" StartPoint="0.4,0">
+
+                    <GradientStop Color="DimGray" Offset="0"/>
+
+                    <GradientStop Color="Silver" Offset="1"/>
+
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Image Source="../Resources/Icons/Pirate.ico" Grid.Column="0" Margin="2" PreviewMouseLeftButtonDown="TitleBar_PreviewMouseLeftButtonDown"></Image>
+            <TextBlock Grid.Column="1" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Bell MT" FontSize="15" PreviewMouseLeftButtonDown="TitleBar_PreviewMouseLeftButtonDown">Pirates Bay</TextBlock>
+            <Button Name="MinimizeButton" Grid.Column="2" Style="{StaticResource TitleBarButton}" Command="{Binding MinimizeCommand}">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Image Name="MinimizeImage" Source="../Resources/Icons/MinimizeIcon.png" Stretch="UniformToFill" Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand">
+                        </Image>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="MinimizeImage" Property="Width" Value="24"></Setter>
+                                <Setter TargetName="MinimizeImage" Property="Height" Value="24"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+            <Button Name="CloseButton" Grid.Column="3" Style="{StaticResource TitleBarButton}" Command="{Binding CloseCommand}">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Image Name="CloseImage" Source="../Resources/Icons/CloseIcon.png" Stretch="UniformToFill" Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand">
+                        </Image>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="CloseImage" Property="Width" Value="24"></Setter>
+                                <Setter TargetName="CloseImage" Property="Height" Value="24"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1" Name="GridMenu">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="6*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="6*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="12*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Name="ButtonLoadGame" Content="Load" Grid.Column="2" Grid.Row="3" Command="{Binding LoadCommand}" Style="{StaticResource MenuButtonDarkStyle}"/>
+            <Button Name="ButtonCancel" Content="Cancel"  Grid.Column="4" Grid.Row="3" Style="{StaticResource MenuButtonDarkStyle}" Command="{Binding CloseCommand}"/>
+            <Grid Name="GridSaves" Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="1" Background="SlateGray">
+                <DataGrid Name="DataGridSaves" Background="Transparent" ColumnWidth="*" CanUserAddRows="False" CanUserDeleteRows="True" PreviewKeyDown="DataGridSaves_OnPreviewKeyDown"/>
+            </Grid>
+        </Grid>
+    </Grid>
+    <Window.Background>
+        <ImageBrush ImageSource="../Resources/Background images/DarkStyle/LoadGameMenuDark.jpg"/>
+    </Window.Background>
+</Window>
